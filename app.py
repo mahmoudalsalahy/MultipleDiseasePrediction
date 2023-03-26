@@ -203,7 +203,50 @@ if (selected == 'Heart Disease Prediction'):
         
     st.success(heart_diagnosis)
         
+    img1 = Image.open("heart/Bhujangasana.png")
+    img2 = Image.open("heart/Padangusthasana.png")
+    img3 = Image.open("heart/Paschimottanasana.png")
+    img4 = Image.open("heart/Savasana.png")
+    img5 = Image.open("heart/Setu Bandhasana.png")
+    img6 = Image.open("heart/Svanasana.png")
+    img7 = Image.open("heart/Tadasana.png")
+    img8 = Image.open("heart/Utkatasana.png")
+    img9 = Image.open("heart/Uttanasana.png")
+    img10 = Image.open("heart/Vrikshasana.png")
     
+    
+    st.subheader('Breathwork for Heart Health: Using Pranayama Techniques to Improve Cardiovascular Function')
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.image(img1,caption='Bhujangasana')        
+        
+    with col2:
+        st.image(img2,caption='Padangusthasana')
+    
+    with col3:
+        st.image(img3,caption='Paschimottanasana')
+        
+    with col1:
+        st.image(img4,caption='Savasana')        
+        
+    with col2:
+        st.image(img5,caption='Setu Bandhasana')
+    
+    with col3:
+        st.image(img6,caption='Svanasana')
+        
+    with col1:
+        st.image(img7,caption='Tadasana')        
+        
+    with col2:
+        st.image(img8,caption='Utkatasana')
+    
+    with col3:
+        st.image(img9,caption='Uttanasana')
+        
+    with col1:
+        st.image(img10,caption='Vrikshasana')
     
 
 # Parkinson's Prediction Page
@@ -296,4 +339,22 @@ if (selected == "Parkinsons Prediction"):
         
     st.success(parkinsons_diagnosis)
 
-
+    img1 = Image.open("parkinson/Supta Baddha Konasana.png")
+    img2 = Image.open("parkinson/tasasana.jpg")
+    img3 = Image.open("parkinson/uttanasana.jpg")
+    img4 = Image.open("parkinson/Virabhadrasana II.jpg")
+    
+    st.subheader('Yoga as a Tool for Stress Reduction and Improved Quality of Life in Parkinson Disease')
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.image(img1,caption='Supta Baddha Konasana')        
+        
+    with col2:
+        st.image(img2,caption='Tasasana')
+    
+    with col3:
+        st.image(img3,caption='Uttanasana')
+        
+    with col1:
+        st.image(img4,caption='Virabhadrasana II')       
