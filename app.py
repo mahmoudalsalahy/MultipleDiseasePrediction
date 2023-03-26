@@ -90,7 +90,51 @@ if (selected == 'Diabetes Prediction'):
         
     st.success(diab_diagnosis)
 
-
+    img1 = Image.open("diabetes/Bhujangasana.jpg")
+    img2 = Image.open("diabetes/Dhanurasana.jpg")
+    img3 = Image.open("diabetes/Mandukasana.jpg")
+    img4 = Image.open("diabetes/Paschimottanasana.jpg")
+    img5 = Image.open("diabetes/Pawanmuktasana.jpg")
+    img6 = Image.open("diabetes/Purvottanasana.jpg")
+    img7 = Image.open("diabetes/Sarvangasana.jpg")
+    img8 = Image.open("diabetes/Shavasana.jpg")
+    img9 = Image.open("diabetes/Surya Namaskar.jpg")
+    img10 = Image.open("diabetes/Viparita Karani.jpg")
+    
+    
+    st.subheader('Yoga Poses for Diabetes: Asanas to Help Control Blood Sugar Levels')
+    
+    col1, col2, col3 = st.columns(3)
+    
+    with col1:
+        st.image(img1,caption='Bhujangasana')        
+        
+    with col2:
+        st.image(img2,caption='Dhanurasana')
+    
+    with col3:
+        st.image(img3,caption='Mandukasana')
+        
+    with col1:
+        st.image(img4,caption='Paschimottanasana')        
+        
+    with col2:
+        st.image(img5,caption='Pawanmuktasana')
+    
+    with col3:
+        st.image(img6,caption='Purvottanasana')
+        
+    with col1:
+        st.image(img7,caption='Sarvangasana')        
+        
+    with col2:
+        st.image(img8,caption='Shavasana')
+    
+    with col3:
+        st.image(img9,caption='Surya Namaskar')
+        
+    with col1:
+        st.image(img10,caption='Viparita Karani')
 
 
 # Heart Disease Prediction Page
