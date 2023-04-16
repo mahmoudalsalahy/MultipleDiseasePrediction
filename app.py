@@ -137,7 +137,8 @@ if (selected == 'Diabetes Prediction'):
     with col1:
         st.image(img10,caption='Viparita Karani')
 
-
+    st.video("https://youtu.be/2Ij3i295XLE")
+    
 # Heart Disease Prediction Page
 if (selected == 'Heart Disease Prediction'):
     
@@ -248,7 +249,8 @@ if (selected == 'Heart Disease Prediction'):
     with col1:
         st.image(img10,caption='Vrikshasana')
     
-
+    st.video("https://youtu.be/dAHrFEGxuS4")
+    
 # Parkinson's Prediction Page
 if (selected == "Parkinsons Prediction"):
     
@@ -358,3 +360,5 @@ if (selected == "Parkinsons Prediction"):
         
     with col1:
         st.image(img4,caption='Virabhadrasana II')       
+
+    st.video("https://youtu.be/g6ocPtR_uZ8")
