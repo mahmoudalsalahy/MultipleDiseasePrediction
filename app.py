@@ -34,12 +34,15 @@ if (selected == 'Diabetes Prediction'):
     # page title
     st.title('Diabetes Prediction using ML')
     
+    option = st.selectbox('What is your gender?',('Male', 'Female'))
     
     # getting the input data from the user
     col1, col2, col3 = st.columns(3)
     
+    
     with col1:
-        Pregnancies = st.number_input('Number of Pregnancies',key="Number of Pregnancies")        
+        if option=="Female":
+            Pregnancies = st.number_input('Number of Pregnancies',key="Number of Pregnancies")     
         
     with col2:
         Glucose = st.number_input('Glucose Level',key="Glucose Level")
