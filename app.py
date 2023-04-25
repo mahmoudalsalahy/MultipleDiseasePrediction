@@ -43,7 +43,9 @@ if (selected == 'Diabetes Prediction'):
     with col1:
         if option=="Female":
             Pregnancies = st.number_input('Number of Pregnancies',key="Number of Pregnancies")     
-        
+        else:
+            Pregnancies=0
+            
     with col2:
         Glucose = st.number_input('Glucose Level',key="Glucose Level")
     
