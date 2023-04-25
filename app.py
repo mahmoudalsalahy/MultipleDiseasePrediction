@@ -101,7 +101,7 @@ if (selected == 'Diabetes Prediction'):
                     }
                 )    
             df = load_data()
-            st.dataframe(df,use_container_width=True)
+            st.dataframe(df)
             
             img1 = Image.open("diabetes/Bhujangasana.jpg")
             img2 = Image.open("diabetes/Dhanurasana.jpg")
@@ -232,7 +232,7 @@ if (selected == 'Heart Disease Prediction'):
                     }
             )    
             df = load_data()
-            st.dataframe(df,use_container_width=True)
+            st.dataframe(df)
             
             img1 = Image.open("heart/Bhujangasana.png")
             img2 = Image.open("heart/Padangusthasana.png")
@@ -387,7 +387,7 @@ if (selected == "Parkinsons Prediction"):
                     }
             )    
             df = load_data()
-            st.dataframe(df,use_container_width=True)
+            st.dataframe(df)
             img1 = Image.open("parkinson/Supta Baddha Konasana.png")
             img2 = Image.open("parkinson/tasasana.jpg")
             img3 = Image.open("parkinson/uttanasana.jpg")
