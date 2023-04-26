@@ -14,7 +14,7 @@ heart_disease_model = pickle.load(open('heart_disease_model.sav','rb'))
 
 parkinsons_model = pickle.load(open('parkinsons_model.sav', 'rb'))
 
-
+liver_model = pickle.load(open('liver_model.sav', 'rb'))
 
 # sidebar for navigation
 with st.sidebar:
@@ -23,8 +23,9 @@ with st.sidebar:
                           
                           ['Diabetes Prediction',
                            'Heart Disease Prediction',
-                           'Parkinsons Prediction'],
-                          icons=['activity','heart','person'],
+                           'Parkinsons Prediction',
+                           'Liver Disease Prediction'],
+                          icons=['activity','heart','person','heart'],
                           default_index=0)
     
     
@@ -420,4 +421,113 @@ if (selected == "Parkinsons Prediction"):
         
     st.success(parkinsons_diagnosis)
 
+if (selected == 'Liver Disease Prediction'):
+
+    st.title("Liver Disease Prediction using ML")
     
+    col1, col2, col3= st.columns(3)  
+    
+    with col1:
+        age = st.number_input('Age')
+        
+    with col2:
+        gender = st.number_input('Gender')
+        
+    with col3:
+        total = st.number_input('Total_Bilirubin')
+        
+    with col1:
+        direct = st.number_input('Direct_Bilirubin')
+        
+    with col2:
+        alkaline = st.number_input('Alkaline_Phosphotase')
+        
+    with col3:
+        alamine = st.number_input('Alamine_Aminotransferase')
+        
+    with col1:
+        aspartate = st.number_input('Aspartate_Aminotransferase')
+        
+    with col2:
+        total_protein = st.number_input('Total_Protiens')
+        
+    with col3:
+        ablumin = st.number_input('Albumin')
+        
+    with col1:
+        albumin_and_globulin = st.number_input('Albumin_and_Globulin_Ratio')
+
+    
+    liver_diagnosis = ''
+    
+    # creating a button for Prediction    
+    if st.button("Liver Test Result"):
+        liver_prediction = liver_model.predict([[age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin]])                          
+        
+        if (liver_prediction[0] == 1):
+            st.markdown(f'<p style="background-color:#ff4b4b;text-align:center;color:#ffffff;font-size:24px;border-radius:2%;">CHECK YOUR RESULTS</p>', unsafe_allow_html=True)
+        
+            st.markdown(f'<p style="text-align:center;color:#ff4b4b;font-size:16px;">You are suffered from Liver Disease</p>', unsafe_allow_html=True)
+                
+            st.markdown(f'<p style="text-align:center;font-size:12px;">I am sorry to hear that you are suffering from liver disease. Please know that my thoughts are with you during this difficult time. It must be challenging to cope with such a serious health condition, but I hope that you have the support and resources you need to manage your symptoms and improve your overall health. Do not hesitate to reach out to your healthcare provider or loved ones for help and guidance. Take care of yourself and know that you are not alone in this journey.</p>', unsafe_allow_html=True)
+
+            ##################################################################################################################
+            def load_data():
+                return pd.DataFrame(
+                    {
+                        "Label": ["Age","Gender","Total_Bilirubin", "Direct_Bilirubin","Alkaline_Phosphotase","Alamine_Aminotransferase","Aspartate_Aminotransferase","Total_Protiens","Albumin","Albumin_and_Globulin_Ratio"],
+                        "Value": [age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin],
+                    }
+            )    
+            df = load_data()
+            st.dataframe(df,use_container_width=True)
+            img1 = Image.open("liver/Adhomukha Svanasana.jfif")
+            img2 = Image.open("liver/Ardha chakrasana.jfif")
+            img3 = Image.open("liver/Bhujangasana.jpg")
+            img4 = Image.open("liver/Chakravakasana.jfif")
+            img5 = Image.open("yoga/liver/Dhanurasana.jpg")
+            img6 = Image.open("liver/Malasana.jpg")
+            img7 = Image.open("liver/Mandukasana.jpg")
+            img8 = Image.open("Marichyasana.png")
+            img9 = Image.open("Naukasana.jfif")
+            img10 = Image.open("Padmasana.jpg")
+            
+            st.subheader('Yoga as a Tool for Stress Reduction and Improved Quality of Life in Liver Disease')
+            col1, col2, col3 = st.columns(3)
+            
+            with col1:
+                st.image(img1,caption='Adhomukha Svanasana')        
+                
+            with col2:
+                st.image(img2,caption='Ardha chakrasana')
+            
+            with col3:
+                st.image(img3,caption='Bhujangasana')
+                
+            with col1:
+                st.image(img4,caption='Chakravakasana')     
+
+            with col2:
+                st.image(img5,caption='Dhanurasana')
+            
+            with col3:
+                st.image(img6,caption='Malasana')
+                
+            with col1:
+                st.image(img7,caption='Mandukasana')  
+
+            with col2:
+                st.image(img8,caption='Marichyasana')
+            
+            with col3:
+                st.image(img9,caption='Naukasana')
+                
+            with col1:
+                st.image(img10,caption='Padmasana')      
+
+            st.video("https://youtu.be/CuFH-BRJQIY")
+            liver_diagnosis = "The person has Liver disease"
+        else:
+            liver_diagnosis = "The person does not have Liver disease"
+        
+    st.success(liver_diagnosis)    
