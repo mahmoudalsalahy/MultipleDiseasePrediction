@@ -527,7 +527,7 @@ if (selected == 'Liver Disease Prediction'):
 
             st.video("https://youtu.be/CuFH-BRJQIY")
             liver_diagnosis = "The person has Liver disease"
-        else:
-            liver_diagnosis = "The person does not have Liver disease"
+#         else:
+#             liver_diagnosis = "The person does not have Liver disease"
         
     st.success(liver_diagnosis)    
