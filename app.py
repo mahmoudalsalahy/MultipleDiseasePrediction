@@ -462,23 +462,24 @@ if (selected == 'Liver Disease Prediction'):
     
     # creating a button for Prediction    
     if st.button("Liver Test Result"):
-#         liver_prediction = liver_model.predict([[age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin]])                          
+        liver_prediction = 1
+#         liver_model.predict([[age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin]])                          
         
-#         if (liver_prediction[0] == 1):
-#             st.markdown(f'<p style="background-color:#ff4b4b;text-align:center;color:#ffffff;font-size:24px;border-radius:2%;">CHECK YOUR RESULTS</p>', unsafe_allow_html=True)
+        if (liver_prediction[0] == 1):
+            st.markdown(f'<p style="background-color:#ff4b4b;text-align:center;color:#ffffff;font-size:24px;border-radius:2%;">CHECK YOUR RESULTS</p>', unsafe_allow_html=True)
         
-#             st.markdown(f'<p style="text-align:center;color:#ff4b4b;font-size:16px;">You are suffered from Liver Disease</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="text-align:center;color:#ff4b4b;font-size:16px;">You are suffered from Liver Disease</p>', unsafe_allow_html=True)
                 
-#             st.markdown(f'<p style="text-align:center;font-size:12px;">I am sorry to hear that you are suffering from liver disease. Please know that my thoughts are with you during this difficult time. It must be challenging to cope with such a serious health condition, but I hope that you have the support and resources you need to manage your symptoms and improve your overall health. Do not hesitate to reach out to your healthcare provider or loved ones for help and guidance. Take care of yourself and know that you are not alone in this journey.</p>', unsafe_allow_html=True)
+            st.markdown(f'<p style="text-align:center;font-size:12px;">I am sorry to hear that you are suffering from liver disease. Please know that my thoughts are with you during this difficult time. It must be challenging to cope with such a serious health condition, but I hope that you have the support and resources you need to manage your symptoms and improve your overall health. Do not hesitate to reach out to your healthcare provider or loved ones for help and guidance. Take care of yourself and know that you are not alone in this journey.</p>', unsafe_allow_html=True)
 
-#             ##################################################################################################################
-#             def load_data():
-#                 return pd.DataFrame(
-#                     {
-#                         "Label": ["Age","Gender","Total_Bilirubin", "Direct_Bilirubin","Alkaline_Phosphotase","Alamine_Aminotransferase","Aspartate_Aminotransferase","Total_Protiens","Albumin","Albumin_and_Globulin_Ratio"],
-#                         "Value": [age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin],
-#                     }
-#             )    
+            ##################################################################################################################
+            def load_data():
+                return pd.DataFrame(
+                    {
+                        "Label": ["Age","Gender","Total_Bilirubin", "Direct_Bilirubin","Alkaline_Phosphotase","Alamine_Aminotransferase","Aspartate_Aminotransferase","Total_Protiens","Albumin","Albumin_and_Globulin_Ratio"],
+                        "Value": [age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin],
+                    }
+            )    
             df = load_data()
             st.dataframe(df,use_container_width=True)
             img1 = Image.open("liver/Adhomukha Svanasana.jfif")
@@ -527,7 +528,7 @@ if (selected == 'Liver Disease Prediction'):
 
             st.video("https://youtu.be/CuFH-BRJQIY")
             liver_diagnosis = "The person has Liver disease"
-#         else:
-#             liver_diagnosis = "The person does not have Liver disease"
+        else:
+            liver_diagnosis = "The person does not have Liver disease"
         
     st.success(liver_diagnosis)    
