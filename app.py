@@ -481,7 +481,7 @@ if (selected == 'Liver Disease Prediction'):
                     }
             )    
             df = load_data()
-            st.dataframe(df,use_container_width=True)
+            st.dataframe(df)
             img1 = Image.open("liver/Adhomukha Svanasana.jfif")
             img2 = Image.open("liver/Ardha chakrasana.jfif")
             img3 = Image.open("liver/Bhujangasana.jpg")
