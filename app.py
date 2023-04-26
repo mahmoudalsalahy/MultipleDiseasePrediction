@@ -462,7 +462,7 @@ if (selected == 'Liver Disease Prediction'):
     
     # creating a button for Prediction    
     if st.button("Liver Test Result"):
-        liver_prediction = 1
+        liver_prediction = [1]
 #         liver_model.predict([[age,gender,total, direct,alkaline,alamine,aspartate,total_protein,ablumin,albumin_and_globulin]])                          
         
         if (liver_prediction[0] == 1):
